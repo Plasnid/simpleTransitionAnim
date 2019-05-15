@@ -1,0 +1,61 @@
+
+h1{
+    font-size:2em;
+}
+h2{
+    font-size: 1.5em;
+}
+h1, h2{
+    display: block;
+    text-align: center;
+    margin: 10px 5px 30px;
+}
+
+/*all buttons begin as blue 200x50 rectangles*/
+.btn {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    background: blue;
+    /*every property transitions over .5 seconds and eases in*/
+    transition: all 0.5s ease-in;
+}
+
+
+#btn1:hover {
+    /*when you hover over the first button it will turn red*/
+    background: #FF0000;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+    /*the width will change over 2 seconds and the height over 3 seconds*/
+    transition: background 0.5s linear 1s,
+                width 0.5s ease-out 2s,
+                height 0.5s ease-out 3s;
+}
+
+
+#btn2:hover {
+    transform: scale(1.5) rotate(20deg) translateX(-20px);
+}
+
+/*
+the translate box immediately after btn3 is going to scale to 1.5x its original size
+*/
+#btn3:hover + #translatebox {
+    transform: scale(1.5);
+}
+
+/*
+    the translatebox is a 200x200 square
+*/
+#translatebox {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+    background: #cc3;
+    margin: 90px auto;
+    transition: all 2s;
+}

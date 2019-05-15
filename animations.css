@@ -1,0 +1,41 @@
+#box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #000;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes example {
+    0% {
+        background: #FF0000;
+        top: 0;
+        left: 0;
+    }
+    25% {
+        background: #00FF00;
+        top: 0;
+        left: 400px;
+    }
+    50% {
+        background: #0000FF;
+        top: 400px;
+        left: 400px;
+    }
+    75% {
+        background: #05A00D;
+        top: 400px;
+        left: 0;
+    }
+    100% {
+        background: #FF0000;
+        top: 0;
+        left: 0;
+    }
+}
